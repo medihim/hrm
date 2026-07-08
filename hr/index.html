@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>메디힘 HR 게이트 페이지</title>
+  <link rel="stylesheet" href="../assets/css/style.css" />
+  <script src="../assets/js/auth.js"></script>
+  <script>requireAuth();</script>
+</head>
+<body>
+  <header class="topbar">
+    <div class="topbar-inner">
+      <a class="brand" href="index.html"><span class="brand-mark">HR</span><span>메디힘 HR 게이트 페이지</span></a>
+      <nav class="nav">
+        <a href="#candidates">인터뷰이</a>
+        <a href="#criteria">평가 기준</a>
+        <a href="interviewees/template.html">평가 템플릿</a>
+        <button onclick="logout()">로그아웃</button>
+      </nav>
+    </div>
+  </header>
+  <main class="wrap">
+    <section class="hero">
+      <div class="eyebrow">HR Gate Page</div>
+      <h1>후보자 평가 게시판</h1>
+      <p>비밀번호 인증 후 진입하는 HR 게이트 페이지입니다. 아래 인터뷰이 섹션 카드 또는 리스트를 클릭하면 후보자별 세부 평가 자료로 이동합니다.</p>
+      <div class="meta">
+        <span class="pill">인터뷰이 카드형 게시판</span>
+        <span class="pill">평가 템플릿 포함</span>
+        <span class="pill">GitHub Pages 운영</span>
+      </div>
+    </section>
+
+    <section id="summary" class="grid grid-4">
+      <article class="card">
+        <span class="tag blue">등록 후보자</span>
+        <div class="score">1명</div>
+        <p>현재 한상훈 후보자 평가자료가 등록되어 있습니다.</p>
+      </article>
+      <article class="card">
+        <span class="tag yellow">현재 판단</span>
+        <div class="score">조건부</div>
+        <p><b>정규 채용 즉시 진행은 보류</b>하고 3개월 POC형 투입을 우선 검토합니다.</p>
+      </article>
+      <article class="card">
+        <span class="tag purple">핵심 병목</span>
+        <div class="score">모객 POC</div>
+        <p>현재 1차 병목은 CX 운영보다 온라인 상담신청 모객 모델 검증입니다.</p>
+      </article>
+      <article class="card">
+        <span class="tag green">후보자 활용</span>
+        <div class="score">Data Ops</div>
+        <p>상담·예약·시술·매출·정산 데이터 운영체계 설계자로 활용합니다.</p>
+      </article>
+    </section>
+
+    <section id="candidates" class="card">
+      <div class="section-head compact">
+        <div>
+          <span class="eyebrow blue-text">Interviewee Board</span>
+          <h2>1. 인터뷰이 리스트</h2>
+        </div>
+      </div>
+      <div class="board-list in-card">
+        <a class="board-card link-card" href="interviewees/hansanghoon.html">
+          <div class="board-card-main">
+            <div class="avatar">한</div>
+            <div>
+              <div class="board-card-title">한상훈 후보자</div>
+              <p>Medidata Senior TAM/CSM, Statistical Programmer, 통계학 박사 기반 데이터 운영형 후보자. 현재 메디힘 스테이지에서는 정규 CX 리드보다 POC 측정체계·상담 데이터 구조 설계 역할이 적합합니다.</p>
+              <div class="tag-row">
+                <span class="tag blue">CX/CRM Data Operations</span>
+                <span class="tag yellow">조건부 검토</span>
+                <span class="tag green">POC형 권장</span>
+              </div>
+            </div>
+          </div>
+          <div class="board-card-side"><span class="status-badge warning-status">정규 보류</span><span class="arrow">→</span></div>
+        </a>
+        <a class="board-card link-card" href="interviewees/template.html">
+          <div class="board-card-main">
+            <div class="avatar muted-avatar">T</div>
+            <div>
+              <div class="board-card-title">신규 인터뷰이 평가 템플릿</div>
+              <p>추가 인터뷰이 평가자료를 만들 때 복사해서 사용할 수 있는 HTML 템플릿입니다.</p>
+              <div class="tag-row"><span class="tag purple">Template</span><span class="tag green">업데이트용</span></div>
+            </div>
+          </div>
+          <div class="board-card-side"><span class="status-badge open-status">사용 가능</span><span class="arrow">→</span></div>
+        </a>
+      </div>
+    </section>
+
+    <section id="criteria" class="card">
+      <h2>2. 메디힘 HR 판단 기준</h2>
+      <table>
+        <thead><tr><th>판단 축</th><th>핵심 질문</th><th>현재 우선순위</th></tr></thead>
+        <tbody>
+          <tr><td>모객 POC</td><td>온라인 상담신청을 반복적으로 만들 수 있는가?</td><td><b>최상</b></td></tr>
+          <tr><td>CX/Data Ops</td><td>상담 이후 데이터를 구조화하고 운영체계화할 수 있는가?</td><td><b>상</b></td></tr>
+          <tr><td>환자 클로징</td><td>상담을 예약·내원·시술로 전환할 수 있는가?</td><td>상</td></tr>
+          <tr><td>병원 연동</td><td>병원 게이트, 상담, 예약, 매출, 정산을 연결할 수 있는가?</td><td>상</td></tr>
+          <tr><td>마케팅/Growth</td><td>채널·오퍼·랜딩·콘텐츠 실험을 주도할 수 있는가?</td><td><b>최상</b></td></tr>
+        </tbody>
+      </table>
+    </section>
+
+    <section class="card">
+      <h2>3. 신규 후보자 페이지 추가 방법</h2>
+      <ol class="checklist">
+        <li><code>hr/interviewees/template.html</code> 파일을 복사합니다.</li>
+        <li>파일명을 후보자 영문명 또는 한글명 영문표기로 저장합니다. 예: <code>kimyounghee.html</code></li>
+        <li>템플릿 안의 후보자명, 포지션, 평가 점수, 의사결정 내용을 수정합니다.</li>
+        <li><code>hr/index.html</code>의 인터뷰이 평가자료 섹션에 후보자 카드를 추가합니다.</li>
+        <li>GitHub에 업로드 후 Pages URL에서 정상 노출되는지 확인합니다.</li>
+      </ol>
+      <div class="warning"><b>주의:</b> GitHub Pages의 정적 비밀번호 게이트는 강력한 보안이 아닙니다. 민감 자료는 private repository, 별도 인증 서버, Notion 권한관리, Google Drive 권한공유 등을 사용하세요.</div>
+    </section>
+
+    <div class="footer">© Medihim HR Internal Review</div>
+  </main>
+</body>
+</html>

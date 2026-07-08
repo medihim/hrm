@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>메디힘 HR Access</title>
+  <link rel="stylesheet" href="assets/css/style.css" />
+</head>
+<body>
+  <main class="gate-wrap">
+    <section class="gate-card" aria-labelledby="gateTitle">
+      <span class="gate-logo">MEDIHIM HR</span>
+      <h1 id="gateTitle">HR 평가자료 접근</h1>
+      <p>내부 검토 자료 열람을 위해 비밀번호를 입력하세요.</p>
+      <form onsubmit="handleLogin(event)">
+        <label class="small" for="password">Access Password</label>
+        <input class="gate-input" id="password" type="password" inputmode="numeric" autocomplete="off" placeholder="비밀번호 입력" autofocus />
+        <button class="btn full" type="submit">게이트 페이지 입장</button>
+        <div id="message" class="alert info">비밀번호 입력 후 HR 게이트 페이지로 이동합니다.</div>
+      </form>
+    </section>
+  </main>
+  <script src="assets/js/auth.js"></script>
+</body>
+</html>

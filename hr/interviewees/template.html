@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>후보자 평가 템플릿 | 메디힘 HR</title>
+  <link rel="stylesheet" href="../../assets/css/style.css" />
+  <script src="../../assets/js/auth.js"></script>
+  <script>requireAuth();</script>
+</head>
+<body>
+  <header class="topbar">
+    <div class="topbar-inner">
+      <a class="brand" href="../index.html"><span class="brand-mark">HR</span><span>메디힘 HR 평가자료</span></a>
+      <nav class="nav">
+        <a href="../index.html">HR 홈</a>
+        <button onclick="window.print()">PDF 출력</button>
+        <button onclick="logout()">로그아웃</button>
+      </nav>
+    </div>
+  </header>
+  <main class="wrap">
+    <section class="hero">
+      <div class="eyebrow">Candidate Review Template</div>
+      <h1>[후보자명] 후보자 평가</h1>
+      <p>[검토 포지션], [검토 목적], [핵심 의사결정 문장]을 입력합니다.</p>
+      <div class="meta">
+        <span class="pill">후보자: [이름]</span>
+        <span class="pill">포지션: [직무]</span>
+        <span class="pill">의사결정: [채용/보류/조건부]</span>
+      </div>
+    </section>
+    <section class="card">
+      <h2>1. 핵심 결론</h2>
+      <div class="decision"><b>[최종 판단]</b><br />[한 문단 요약]</div>
+    </section>
+    <section class="card">
+      <h2>2. 후보자 프로필 요약</h2>
+      <table>
+        <thead><tr><th>항목</th><th>내용</th></tr></thead>
+        <tbody>
+          <tr><td>주요 경력</td><td>[입력]</td></tr>
+          <tr><td>핵심 스킬</td><td>[입력]</td></tr>
+          <tr><td>강점</td><td>[입력]</td></tr>
+          <tr><td>리스크</td><td>[입력]</td></tr>
+        </tbody>
+      </table>
+    </section>
+    <section class="card">
+      <h2>3. 메디힘 정합성 평가</h2>
+      <table>
+        <thead><tr><th>평가 축</th><th>점수</th><th>판단</th></tr></thead>
+        <tbody>
+          <tr><td>Problem Fit</td><td>[점수]</td><td>[입력]</td></tr>
+          <tr><td>Skill Fit</td><td>[점수]</td><td>[입력]</td></tr>
+          <tr><td>Stage Fit</td><td>[점수]</td><td>[입력]</td></tr>
+          <tr><td>Execution Fit</td><td>[점수]</td><td>[입력]</td></tr>
+          <tr><td>Risk Fit</td><td>[점수]</td><td>[입력]</td></tr>
+        </tbody>
+      </table>
+    </section>
+    <section class="card">
+      <h2>4. 90일 미션 / KPI</h2>
+      <table>
+        <thead><tr><th>기간</th><th>미션</th><th>산출물</th></tr></thead>
+        <tbody>
+          <tr><td>1~30일</td><td>[입력]</td><td>[입력]</td></tr>
+          <tr><td>31~60일</td><td>[입력]</td><td>[입력]</td></tr>
+          <tr><td>61~90일</td><td>[입력]</td><td>[입력]</td></tr>
+        </tbody>
+      </table>
+    </section>
+    <section class="card">
+      <h2>5. 최종 의사결정</h2>
+      <div class="warning"><b>[채용 / 조건부 / 보류]</b><br />[의사결정 사유]</div>
+    </section>
+  </main>
+</body>
+</html>
