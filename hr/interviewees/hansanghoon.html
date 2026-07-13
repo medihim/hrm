@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>한상훈 후보자 평가 | 메디힘 HR</title>
+  <title>한상훈 후보자 한시적 채용안 | 메디힘 HR</title>
   <link rel="stylesheet" href="../../assets/css/style.css" />
   <script src="../../assets/js/auth.js"></script>
   <script>requireAuth();</script>
@@ -14,9 +14,10 @@
       <a class="brand" href="../index.html"><span class="brand-mark">HR</span><span>메디힘 HR 평가자료</span></a>
       <nav class="nav">
         <a href="../index.html">HR 홈</a>
-        <a href="#decision">결론</a>
-        <a href="#poc">POC 기준</a>
-        <a href="#mission">90일 미션</a>
+        <a href="#overview">Overview</a>
+        <a href="#decision">채용안</a>
+        <a href="#kpi">KPI</a>
+        <a href="#review">리뷰</a>
         <button onclick="window.print()">PDF 출력</button>
         <button onclick="logout()">로그아웃</button>
       </nav>
@@ -25,169 +26,190 @@
 
   <main class="wrap">
     <section class="hero">
-      <div class="eyebrow">Candidate Review</div>
-      <h1>한상훈 후보자 채용 의사결정 검토</h1>
-      <p>현재 메디힘의 온라인 상담신청 모객 POC 미완성 상황을 전제로, 후보자를 지금 채용하는 것이 적절한지, 어떤 상태가 되면 정규 채용이 적합한지 정리한 내부 검토 자료입니다.</p>
+      <div class="eyebrow">Candidate Conditional Hiring Plan</div>
+      <h1>한상훈 후보자 3개월 한시적 채용안</h1>
+      <p>한상훈의 역량, 최준혁 대표의 End-to-End 요구, 용성남의 데이터 아키텍터 기반 운영 Fit 검증 관점을 통합하여 3개월 조건부 미션과 KPI를 확정하기 위한 내부 의사결정 자료입니다.</p>
       <div class="meta">
         <span class="pill">후보자: 한상훈</span>
-        <span class="pill">검토 포지션: CX/CRM Data Operations Lead</span>
-        <span class="pill">의사결정: 조건부/프로젝트형 권장</span>
+        <span class="pill">기본 포지션: Data Architect / CRM Data Ops</span>
+        <span class="pill">운영 챌린지: End-to-End POC Operations</span>
+        <span class="pill">판단 방식: 30/60/90일 Gate Review</span>
       </div>
     </section>
 
-    <section id="decision" class="card">
-      <h2>1. 핵심 결론</h2>
-      <div class="decision">
-        <b>정규 CX 리드로 즉시 채용하는 것은 아직 이릅니다.</b><br />
-        다만 3개월 조건부 프로젝트형, POC 운영 설계형, 파트타임 리드형으로는 충분히 검토 가치가 있습니다.
-      </div>
-      <p class="lead">현재 메디힘의 1차 병목은 CX 운영 고도화가 아니라 <b>온라인 상담신청 모객 모델의 POC 미완성</b>입니다. 따라서 후보자를 “매출을 바로 만드는 상담 클로저”로 쓰면 미스매치 가능성이 높고, “3개 모객 트랙의 실험 구조와 상담·예약 데이터 체계를 만드는 사람”으로 쓰면 현재 단계에서도 의미가 있습니다.</p>
-      <div class="quote">최종 판단: 지금 한상훈 후보자는 “아직 이른 인재”가 아니라, <b>역할을 잘못 주면 이른 인재</b>입니다.</div>
+    <section id="overview" class="card">
+      <h2>1. 3대 어젠다 Overview</h2>
+      <p class="lead">이번 채용 판단의 핵심은 “한상훈을 일본 모객 총괄로 볼 것인가”가 아니라, <b>데이터 아키텍터형 인재를 운영씬에 강하게 투입해 실제 Fit과 결과를 검증할 것인가</b>입니다.</p>
+      <table>
+        <thead><tr><th>어젠다</th><th>핵심 내용</th><th>의사결정 의미</th><th>위험요소</th></tr></thead>
+        <tbody>
+          <tr>
+            <td><b>① 한상훈의 역량</b></td>
+            <td>통계학·데이터 구조화·SaaS CSM·SLA/VOC·리포팅 역량이 강함. CRM, 데이터 대시보드, 프로세스 표준화에 강점을 가짐.</td>
+            <td>기본 직무 정체성은 <b>데이터 아키텍터 / CRM Data Operations Lead</b>로 본다.</td>
+            <td>일본 모객, 제휴 영업, 환자 직접 클로징, 방한 현장 코디는 검증 필요.</td>
+          </tr>
+          <tr>
+            <td><b>② 최준혁 대표의 요구</b></td>
+            <td>일본 모객 → 상담 → 병원 상담 → 예약 → 방한·시술 → 결제 → 사후관리까지 End-to-End 운영 오너 요구.</td>
+            <td>이뻐 일본 사업이 궁극적으로 필요로 하는 역할상은 타당하므로 운영 챌린지 범위로 반영한다.</td>
+            <td>3개월 수습에 직접 매출·제휴 계약 KPI를 과도하게 걸면 후보자 통제 범위를 넘어설 수 있음.</td>
+          </tr>
+          <tr>
+            <td><b>③ 용성남 판단</b></td>
+            <td>기본적으로 데이터 아키텍터로 보되, 운영씬의 Roll을 최대한 챌린지하여 본인과 사업의 적합도를 진단하고 결과를 확인한 뒤 최종 판단.</td>
+            <td>정규 채용 확정이 아니라 <b>3개월 한시적 평가 채용</b>으로 설계한다.</td>
+            <td>역할이 모호하면 모객도, 데이터도, 운영도 애매해질 수 있으므로 미션과 평가척도를 명확히 해야 함.</td>
+          </tr>
+        </tbody>
+      </table>
+      <div class="decision"><b>통합 결론:</b> 한상훈 후보자는 “일본 모객 총괄”로 바로 확정하지 않는다. 대신 <b>POC Operations & CRM Data Lead</b>로 3개월 투입해 데이터 구조화 능력과 운영 실행 적합도를 동시에 검증한다.</div>
     </section>
 
     <section class="grid grid-3">
       <article class="card">
-        <span class="tag red">비추천</span>
-        <h3>정규 CX 리드 즉시 채용</h3>
-        <p>상담 데이터와 예약·시술 모수가 아직 작아 후보자의 데이터 운영 역량이 충분히 작동하기 어렵습니다.</p>
+        <span class="tag blue">본인 강점</span>
+        <h3>Data Architecture</h3>
+        <p>흩어진 리드·상담·병원연계·예약·시술·매출 데이터를 하나의 추적 가능한 구조로 재설계하는 역할.</p>
       </article>
       <article class="card">
-        <span class="tag green">추천</span>
-        <h3>3개월 POC Operations 계약</h3>
-        <p>3개 모객 트랙의 측정체계, 상태값, 필드, 병원 전달 기준을 설계하는 역할로는 적합합니다.</p>
+        <span class="tag purple">회사 요구</span>
+        <h3>End-to-End Ownership</h3>
+        <p>일본 고객 모객부터 결제·사후관리까지 고객 여정 전 과정을 운영 가능한 프로세스로 만드는 역할.</p>
       </article>
       <article class="card">
-        <span class="tag blue">최적</span>
-        <h3>POC 신호 확인 후 정규 전환</h3>
-        <p>월 상담신청·예약·내원 신호가 반복되면 CX/Data Ops 정규 리드로 전환하는 구조가 가장 안전합니다.</p>
+        <span class="tag green">평가 설계</span>
+        <h3>Challenge & Fit Test</h3>
+        <p>3개월 동안 운영씬을 실제로 맡겨보고, 데이터형 인재가 초기 이뻐 사업 운영에 맞는지 검증.</p>
       </article>
     </section>
 
-    <section class="card">
-      <h2>2. 현재 메디힘 상황 정의</h2>
+    <section id="decision" class="card">
+      <h2>2. 최종 한시적 채용 조건</h2>
       <table>
-        <thead><tr><th>트랙</th><th>전술 구조</th><th>현재 상태</th><th>후보자 적합성</th></tr></thead>
+        <thead><tr><th>항목</th><th>확정안</th><th>설명</th></tr></thead>
         <tbody>
-          <tr><td>트랙 ①</td><td>오프라인 상담회 → 온라인 상담 → 최종 시술/수술</td><td>완주 케이스 모수가 작음</td><td>측정체계 설계는 가능, 모객 자체 해결은 제한적</td></tr>
-          <tr><td>트랙 ②</td><td>병원 기존 유입게이트 + 이뻐 게이트 추가</td><td>가장 현실성 높은 실험 트랙</td><td>병원별 데이터·리포트·상담 전달 구조 설계에 적합</td></tr>
-          <tr><td>트랙 ③</td><td>이뻐 자체 온라인 상담신청 → 인벤토리 병원 부킹</td><td>장기 자산 가능성은 높으나 단기 난이도 높음</td><td>부킹 운영과 데이터 구조화에는 적합, 브랜드/Growth는 별도 필요</td></tr>
+          <tr><td>채용 형태</td><td><b>3개월 한시적 조건부 채용</b></td><td>정규 채용 확정이 아니라, 수습/프로젝트형 평가 기간으로 운영한다.</td></tr>
+          <tr><td>직무명</td><td><b>POC Operations & CRM Data Lead</b></td><td>대외적으로는 운영기획/일본 고객 모객 제휴 담당으로 둘 수 있으나, 내부 평가는 데이터 운영과 POC 설계 중심으로 한다.</td></tr>
+          <tr><td>기본 정체성</td><td><b>Data Architect</b></td><td>상담·예약·병원·매출 데이터를 연결하는 구조 설계자를 기본값으로 본다.</td></tr>
+          <tr><td>운영 챌린지</td><td><b>End-to-End 운영 Roll 최대 부여</b></td><td>모객, 제휴, 상담연계, 병원전달, 예약, 매출 추적, 사후관리까지 가능한 범위에서 직접 챌린지한다.</td></tr>
+          <tr><td>평가 원칙</td><td><b>성과 숫자 + 통제 가능 산출물 분리</b></td><td>리드·예약·매출은 참고/공동 지표로 보되, 개인 평가는 데이터 구조·운영 프로세스·실행 기여도를 중심으로 본다.</td></tr>
+          <tr><td>최종 판단</td><td><b>90일 후 정규 전환/연장/종료</b></td><td>30/60/90일 Gate Review로 단계별 적합성을 판단한다.</td></tr>
         </tbody>
       </table>
-      <div class="warning"><b>핵심:</b> 현재 필요한 1순위 역량은 모객 가설 수립, 채널 테스트, 메시지/오퍼 검증, 상담신청 전환 실험입니다. 후보자의 1순위 역량은 데이터 구조화, CRM 운영, SLA, VOC, 리포팅입니다.</div>
+      <div class="quote">채용 목적: “3개월 안에 일본 모객 매출을 혼자 만들라”가 아니라, <b>“3개월 안에 일본 모객 POC가 작동하는지 판단 가능한 운영·데이터 체계를 만들고, 동시에 운영 현장에서 본인 Fit을 검증하라”</b>입니다.</div>
     </section>
 
     <section class="card">
-      <h2>3. 질문 A — 지금 채용하는 게 맞는가?</h2>
+      <h2>3. 역할 범위 재정의</h2>
       <table>
-        <thead><tr><th>채용 방식</th><th>판단</th><th>이유</th></tr></thead>
+        <thead><tr><th>구분</th><th>맡긴다</th><th>챌린지한다</th><th>단독 책임으로 보지 않는다</th></tr></thead>
         <tbody>
-          <tr><td>정규 CX 리드</td><td><span class="tag red">보류</span></td><td>모객 POC가 아직 완성되지 않아 후보자의 강점이 충분히 발휘되기 어렵습니다.</td></tr>
-          <tr><td>상담 실무/환자 클로저</td><td><span class="tag red">부적합</span></td><td>B2B SaaS CSM·데이터 운영형 이력과 직접 환자 클로징은 다른 역량입니다.</td></tr>
-          <tr><td>3개월 POC 운영/데이터 설계</td><td><span class="tag green">가능</span></td><td>트랙별 실험 측정체계, CRM 필드, 상태값, 병원 전달 기준을 만들 수 있습니다.</td></tr>
-          <tr><td>POC 이후 정규 전환</td><td><span class="tag blue">추천</span></td><td>상담신청·예약·내원 신호가 반복되면 운영 레버리지로 작동할 수 있습니다.</td></tr>
-        </tbody>
-      </table>
-    </section>
-
-    <section id="poc" class="card">
-      <h2>4. 질문 B — 어느 정도 POC가 끝나야 적합한가?</h2>
-      <p>POC 완료 기준은 큰 매출이 아니라 <b>반복 가능한 최소 신호</b>입니다.</p>
-      <div class="grid grid-4">
-        <div class="kpi"><b>월 상담신청</b><div class="score">30+</div><span class="small">온라인 상담신청</span></div>
-        <div class="kpi"><b>월 유효 상담</b><div class="score">10~15</div><span class="small">상담 품질 판단 가능</span></div>
-        <div class="kpi"><b>월 예약/부킹</b><div class="score">3~5</div><span class="small">부킹 프로세스 검증</span></div>
-        <div class="kpi"><b>월 내원/시술</b><div class="score">1~2</div><span class="small">완주 경로 존재 확인</span></div>
-      </div>
-      <h3>정규 채용 적합 조건</h3>
-      <table>
-        <thead><tr><th>기준</th><th>목표</th><th>해석</th></tr></thead>
-        <tbody>
-          <tr><td>월 온라인 상담신청</td><td>30건 이상</td><td>데이터 구조화와 상태값 관리가 의미 있어짐</td></tr>
-          <tr><td>월 유효 상담</td><td>10~15건 이상</td><td>이탈 사유와 상담 품질 판단 가능</td></tr>
-          <tr><td>월 예약/부킹</td><td>3~5건 이상</td><td>병원 전달과 예약 관리 체계 필요</td></tr>
-          <tr><td>월 내원/시술</td><td>1~2건 이상</td><td>최종 완주 경로가 작동함</td></tr>
-          <tr><td>반복 신호</td><td>2개 이상 트랙</td><td>운영 리드의 레버리지가 커짐</td></tr>
+          <tr><td>데이터/CRM</td><td>상담신청 필드, 상태값, 유입경로, 환자/상담/예약 ID, 대시보드 설계</td><td>실제 운영팀이 쓰도록 적용률을 끌어올림</td><td>초기 시스템 개발 전체</td></tr>
+          <tr><td>모객/제휴</td><td>제휴 후보 리스트, 우선순위 평가, 리드 유입 트래킹 구조</td><td>일본 제휴 미팅과 파일럿 합의까지 시도</td><td>3개월 내 제휴 계약·유효 리드 숫자 전부</td></tr>
+          <tr><td>상담/예약</td><td>유효 리드 기준, 상담 상태값, 이탈 사유, 예약 전환 병목 분석</td><td>상담 스크립트·리마인드·병원연계 개선을 직접 제안/실행</td><td>환자 클로징, 예약금 결제, 시술 결정 전부</td></tr>
+          <tr><td>병원/매출</td><td>병원 전달 브리프, 회신 SLA, 예약/내원/시술/매출 매칭표</td><td>병원과 협업하여 실제 케이스를 끝까지 추적</td><td>병원 상담력, 최종 시술 매출 전부</td></tr>
+          <tr><td>사후관리</td><td>VOC, 후기, CS, 재방문 관리 프로세스 설계</td><td>실제 1~2건 이상 케이스 적용</td><td>의료적 판단, 부작용 상담, 결과 보장 표현</td></tr>
         </tbody>
       </table>
     </section>
 
-    <section class="card">
-      <h2>5. 질문 자체를 어떻게 바꿔야 하는가?</h2>
-      <div class="grid grid-3">
-        <article class="card" style="box-shadow:none">
-          <span class="tag blue">질문 1</span>
-          <h3>현재 병목은 모객 부재인가, 모객 이후 운영 부재인가?</h3>
-          <p>모객 부재라면 Growth Lead가 우선이고, 모객 이후 운영 혼선이라면 후보자 FIT이 높아집니다.</p>
-        </article>
-        <article class="card" style="box-shadow:none">
-          <span class="tag purple">질문 2</span>
-          <h3>90일 산출물은 매출인가, 측정 가능한 운영체계인가?</h3>
-          <p>매출이면 부적합할 수 있고, POC 측정체계라면 적합합니다.</p>
-        </article>
-        <article class="card" style="box-shadow:none">
-          <span class="tag green">질문 3</span>
-          <h3>지금 뽑을 사람은 Growth Lead인가, CX/Data Ops Lead인가?</h3>
-          <p>현재 기준 Growth Lead가 1순위, CX/Data Ops Lead는 1.5순위입니다.</p>
-        </article>
-      </div>
-      <div class="quote">가장 정확한 질문: “지금 메디힘은 모객을 해결할 사람이 필요한가, 아니면 모객 실험을 측정하고 운영화할 사람이 필요한가?”</div>
-    </section>
-
-    <section class="card">
-      <h2>6. Stage-Gate Hiring Model</h2>
+    <section id="kpi" class="card">
+      <h2>4. 최종 KPI 스코어카드</h2>
+      <p class="lead">기존 대표 요구안의 End-to-End 방향성은 유지하되, 한상훈 후보자의 강점과 현재 메디힘 스테이지를 반영하여 <b>개인 통제 가능 KPI</b>와 <b>사업 성과 참고 KPI</b>를 분리합니다.</p>
       <table>
-        <thead><tr><th>단계</th><th>상태</th><th>필요 인재</th><th>한상훈 적합도</th></tr></thead>
+        <thead><tr><th>평가 축</th><th>배점</th><th>KPI</th><th>Description</th><th>90일 목표</th></tr></thead>
         <tbody>
-          <tr><td>Stage 0</td><td>가설 단계</td><td>사업기획/마케팅 전략</td><td>중간</td></tr>
-          <tr><td>Stage 1</td><td>모객 POC 단계</td><td>Growth Lead, 퍼포먼스/콘텐츠</td><td>중간 이하</td></tr>
-          <tr><td>Stage 2</td><td>상담신청 발생 단계</td><td>CX/CRM 설계자</td><td>높음</td></tr>
-          <tr><td>Stage 3</td><td>예약/내원 발생 단계</td><td>Data Ops + Patient Ops</td><td>매우 높음</td></tr>
-          <tr><td>Stage 4</td><td>병원 확장 단계</td><td>CX/CRM/Data Ops Lead</td><td>매우 높음</td></tr>
-          <tr><td>Stage 5</td><td>다국가 확장 단계</td><td>Global Patient Ops Director</td><td>높음</td></tr>
+          <tr><td rowspan="3"><b>A. POC 트랙 설계·운영</b></td><td rowspan="3">20점</td><td>3개 트랙 퍼널맵</td><td>오프라인 상담회, 병원 게이트, 이뻐 자체 트랙을 각각 리드→상담→병원연계→예약→내원→시술→매출 흐름으로 분해하고 측정 지점을 정의한다.</td><td>완료</td></tr>
+          <tr><td>POC 성공/실패 기준</td><td>각 트랙을 계속·보정·중단할 기준을 정의한다. 단순 매출이 아니라 상담신청, 유효상담, 예약, 병원연계, 매출추적 가능성을 기준화한다.</td><td>완료</td></tr>
+          <tr><td>주간 POC 리뷰</td><td>매주 트랙별 숫자, 병목, 다음 액션을 정리해 경영진이 판단할 수 있는 형태로 보고한다.</td><td>8회 이상</td></tr>
+
+          <tr><td rowspan="4"><b>B. CRM·데이터 아키텍처</b></td><td rowspan="4">30점</td><td>상담신청 필수 필드</td><td>유입경로, 국가, 관심 시술, 예산, 일정, 상담상태, 병원연계 여부, 예약/내원/시술/매출 상태를 추적할 수 있는 필드를 설계한다.</td><td>완료</td></tr>
+          <tr><td>상태값·코드 체계</td><td>신규문의, 유효상담, 병원요청, 예약제안, 예약확정, 내원, 시술, 결제, 이탈 등 단계별 상태값과 이탈 사유 코드를 만든다.</td><td>적용률 90%+</td></tr>
+          <tr><td>통합 관리표/대시보드</td><td>구글시트 또는 CRM 수준에서 리드·상담·예약·병원·시술·매출 상태를 한 화면에서 확인 가능한 MVP 대시보드를 만든다.</td><td>운영 개시</td></tr>
+          <tr><td>데이터 품질관리</td><td>필수값 누락, 중복 리드, 유입경로 미기재, 상태값 누락을 관리하고 주간 단위로 오류를 점검한다.</td><td>필수 입력률 90%+</td></tr>
+
+          <tr><td rowspan="3"><b>C. End-to-End 운영 챌린지</b></td><td rowspan="3">25점</td><td>병원 상담 연계</td><td>환자 니즈와 병원 인벤토리를 매칭하고, 병원 전달 브리프·회신 SLA·견적/상담 팔로업 구조를 만든다.</td><td>운영 개시</td></tr>
+          <tr><td>예약·내원·매출 추적</td><td>예약 환자가 실제 내원·시술·결제까지 이어졌는지 병원 자료와 상담 데이터를 매칭해 확인한다.</td><td>추적 가능률 80%+</td></tr>
+          <tr><td>사후관리 SOP</td><td>시술 후 CS, VOC, 후기 요청, 재방문 가능성 관리 프로세스와 메시지 템플릿을 만든다.</td><td>1차 완성</td></tr>
+
+          <tr><td rowspan="3"><b>D. 데이터 기반 인사이트</b></td><td rowspan="3">15점</td><td>지연/이탈 원인 분석</td><td>일본 고객이 예약·방한·시술 결정을 지연하는 이유를 가격, 일정, 신뢰, 결과 불안, 사후관리 등으로 분류한다.</td><td>Top 5 도출</td></tr>
+          <tr><td>전환 병목 리포트</td><td>트랙별·단계별 전환율과 이탈 위치를 분석해 어디를 보정해야 하는지 제안한다.</td><td>월 1회 이상</td></tr>
+          <tr><td>개선 실험</td><td>상담 스크립트, 리마인드, 병원 브리프, 신뢰자료, 회신 SLA 등 병목 개선을 위한 소규모 실험을 설계·실행·리뷰한다.</td><td>2건 이상</td></tr>
+
+          <tr><td rowspan="2"><b>E. 실행·협업</b></td><td rowspan="2">10점</td><td>리포팅·실행 속도</td><td>주간 1:1 및 월말 리뷰 전에 진행상황, 병목, 의사결정 요청사항을 정리하고 합의된 액션을 기한 내 실행한다.</td><td>주간 정례</td></tr>
+          <tr><td>크로스펑셔널 협업</td><td>마케팅, 상담, 병원 공급, 대표 보고 라인과 요청사항·회신·담당자를 명확히 관리한다.</td><td>이슈 트래커 운영</td></tr>
         </tbody>
       </table>
-      <div class="decision">현재 메디힘은 <b>Stage 1과 Stage 2 사이</b>입니다. 따라서 정규 채용은 이르고, POC 측정체계 구축 역할은 적합합니다.</div>
+      <div class="warning"><b>평가 주의:</b> 유효 리드 수, 예약 수, 결제·매출 건수는 사업 성과 참고 지표로 관리하되, 후보자 개인 평가는 해당 성과를 만들기 위한 데이터 구조, 운영 프로세스, 병목 분석, 개선 실행 기여도를 중심으로 본다.</div>
     </section>
 
-    <section id="mission" class="card">
-      <h2>7. 90일 조건부 미션</h2>
+    <section class="card">
+      <h2>5. 참고 성과 지표</h2>
+      <p>아래 지표는 최준혁 대표 요구안의 사업성과 항목을 반영하되, 3개월 수습의 개인 KPI가 아니라 <b>사업 성과 관찰 지표</b>로 둡니다.</p>
+      <table>
+        <thead><tr><th>지표</th><th>관찰 목표</th><th>평가 방식</th></tr></thead>
+        <tbody>
+          <tr><td>제휴 계약·MOU</td><td>누적 1~3건 시도/진행</td><td>계약 결과뿐 아니라 후보 리스트, 미팅, 조건 검토, 파일럿 합의 수준을 함께 본다.</td></tr>
+          <tr><td>유효 일본 리드</td><td>월 10~30건 범위</td><td>모객 자체보다 유효 리드 정의와 채널별 분류·추적 가능성을 본다.</td></tr>
+          <tr><td>리드→예약 전환율</td><td>초기 기준선 산출</td><td>25% 달성 여부보다 현재 기준 전환율과 이탈 원인을 확인한다.</td></tr>
+          <tr><td>예약→결제·매출</td><td>1건 이상 실증 시 강한 신호</td><td>매출 건수보다 예약→내원→시술→결제 추적 가능성을 우선 평가한다.</td></tr>
+          <tr><td>리뷰·사후관리</td><td>적용 케이스 발생 시 기록</td><td>후기 확보 수보다 사후관리 SOP와 VOC 기록 체계 구축을 본다.</td></tr>
+        </tbody>
+      </table>
+    </section>
+
+    <section id="review" class="card">
+      <h2>6. 30/60/90일 Gate Review</h2>
       <div class="timeline">
-        <div class="timeline-item"><b>1~2주</b><div><b>현재 3개 트랙 구조 진단</b><br />산출물: 트랙별 퍼널맵, 병목 가설, 데이터 수집 위치 정의</div></div>
-        <div class="timeline-item"><b>3~4주</b><div><b>상담신청 데이터 구조 설계</b><br />산출물: 필수 필드, 상태값, 유입 코드, 환자/상담/예약 ID 기준</div></div>
-        <div class="timeline-item"><b>5~8주</b><div><b>POC 측정체계 구축</b><br />산출물: 주간 리포트, 전환율, 이탈 사유, 병원 전달 체크리스트</div></div>
-        <div class="timeline-item"><b>9~12주</b><div><b>트랙별 성과 판단</b><br />산출물: 계속/중단/보정 의사결정 리포트, 정규 전환 여부 판단 기준</div></div>
+        <div class="timeline-item"><b>Day 30</b><div><b>진단·설계 Gate</b><br />3개 트랙 퍼널맵, 필수 필드, 상태값, 유효 리드 기준, 병원 전달 브리프 초안을 확인한다. 판단: 학습 속도와 구조화 능력.</div></div>
+        <div class="timeline-item"><b>Day 60</b><div><b>적용·실행 Gate</b><br />실제 상담/제휴/병원연계 운영에 데이터 구조가 적용되는지, 주간 리포트와 이슈 트래커가 작동하는지 확인한다. 판단: 핸즈온 실행력과 협업력.</div></div>
+        <div class="timeline-item"><b>Day 90</b><div><b>성과·전환 Gate</b><br />트랙별 계속/보정/중단 판단안, 전환 병목, 이탈 원인, 개선 실험 결과, 다음 180일 계획을 확인한다. 판단: 정규 전환 가능성.</div></div>
       </div>
-      <h3>90일 KPI</h3>
       <table>
-        <thead><tr><th>KPI</th><th>목표</th></tr></thead>
+        <thead><tr><th>점수</th><th>판정</th><th>조치</th></tr></thead>
         <tbody>
-          <tr><td>3개 트랙 퍼널 정의</td><td>100%</td></tr>
-          <tr><td>상담신청 필수 필드 설계</td><td>완료</td></tr>
-          <tr><td>유입경로/상담상태/예약상태 코드화</td><td>완료</td></tr>
-          <tr><td>주간 POC 리포트</td><td>4회 이상</td></tr>
-          <tr><td>병원 전달 체크리스트</td><td>완료</td></tr>
-          <tr><td>상담→예약 병목 분석</td><td>1차 도출</td></tr>
-          <tr><td>POC 계속/중단 판단 기준</td><td>문서화</td></tr>
+          <tr><td>85점 이상</td><td><span class="tag green">정규 전환 우수</span></td><td>CX/CRM Data Operations Lead로 정규 전환 및 역할 확대 검토</td></tr>
+          <tr><td>75~84점</td><td><span class="tag blue">정규 전환 가능</span></td><td>정규 전환하되 4~6개월 성과 목표 재설정</td></tr>
+          <tr><td>65~74점</td><td><span class="tag yellow">조건부 연장</span></td><td>1개월 연장 또는 프로젝트형 유지</td></tr>
+          <tr><td>64점 이하</td><td><span class="tag red">전환 비추천</span></td><td>계약 종료 또는 역할 재검토</td></tr>
         </tbody>
       </table>
     </section>
 
     <section class="card">
-      <h2>8. 최종 의사결정안</h2>
+      <h2>7. Knock-out 및 리스크 통제</h2>
       <table>
-        <thead><tr><th>항목</th><th>판단</th></tr></thead>
+        <thead><tr><th>KO 항목</th><th>판정</th><th>설명</th></tr></thead>
         <tbody>
-          <tr><td>A. 본 상황에서 채용하는 게 맞는가?</td><td><b>정규 CX 리드로는 아직 이르다. 3개월 POC 운영/데이터 설계 역할로는 가능하다.</b></td></tr>
-          <tr><td>B. 어느 정도 POC가 끝나야 적합한가?</td><td><b>월 상담신청 30건+, 유효 상담 10~15건+, 예약 3~5건+, 시술 1~2건+ 신호가 필요하다.</b></td></tr>
-          <tr><td>C. 질문 자체를 바꾼다면?</td><td><b>지금 필요한 사람은 모객을 해결할 Growth Lead인가, 모객 실험을 측정하고 운영화할 CX/Data Ops Lead인가?</b></td></tr>
+          <tr><td>의료광고법·개인정보 중대 위반</td><td>즉시 미전환</td><td>환자 사진, 상담정보, 결과보장 표현, 의료적 판단 대행 등 중대 리스크 발생 시 종료</td></tr>
+          <tr><td>고객 신뢰·데이터 훼손 사고</td><td>즉시 미전환</td><td>데이터 임의 삭제, 무단 공유, 환자/병원 신뢰 훼손 사고</td></tr>
+          <tr><td>핵심 리포팅 반복 미이행</td><td>미전환 검토</td><td>주간/월간 리뷰 자료 미제출, 액션아이템 관리 실패가 반복되는 경우</td></tr>
+          <tr><td>핸즈온 실행 거부</td><td>미전환 검토</td><td>“시스템이 없어서 못 한다”는 방식으로 구글시트/LINE 기반 MVP 운영을 회피하는 경우</td></tr>
         </tbody>
       </table>
-      <div class="decision"><b>추천안:</b> 정규 채용 즉시 진행 X / 3개월 조건부 또는 프로젝트형 POC Operations 역할 O / POC 신호 확인 후 정규 전환 O</div>
+      <div class="note">제휴 계약 0건, 매출 0건은 무조건 KO로 두지 않는다. 현재 메디힘의 모객 POC 단계에서는 후보자 개인 통제 범위를 벗어날 수 있으므로, 대신 제휴 발굴·실험 설계·데이터 추적·병목 분석을 평가한다.</div>
     </section>
 
     <section class="card">
-      <h2>9. GitHub 업데이트 메모</h2>
-      <p>본 페이지는 <code>hr/interviewees/hansanghoon.html</code>에 저장되어 있습니다. 신규 후보자 평가자료는 <code>template.html</code>을 복사해 별도 파일로 추가하면 됩니다.</p>
+      <h2>8. 후보자에게 제시할 미션 문구</h2>
+      <div class="quote">
+        메디힘은 현재 이뻐 일본 사업의 모객 모델과 운영 모델을 검증하는 단계입니다. 3개월 동안의 핵심 미션은 일본 모객 매출을 혼자 책임지는 것이 아니라, 오프라인 상담회 트랙, 병원 게이트 트랙, 이뻐 자체 트랙의 성과를 비교·판단할 수 있는 데이터 운영 구조를 구축하고, 상담신청부터 병원연계, 예약, 내원, 시술, 매출 확인까지 이어지는 최소 CRM 체계를 만드는 것입니다. 동시에 운영 현장에서 직접 실행하며 본인의 데이터형 역량이 이뻐 사업 운영에 적합한지 검증합니다.
+      </div>
+    </section>
+
+    <section class="card">
+      <h2>9. 최종 내부 결론</h2>
+      <table>
+        <thead><tr><th>질문</th><th>결론</th></tr></thead>
+        <tbody>
+          <tr><td>한상훈의 역량과 맞는가?</td><td><b>데이터 아키텍처, CRM, 리포팅, 운영 표준화에는 높게 맞음. 직접 모객·매출 오너로는 낮음.</b></td></tr>
+          <tr><td>최준혁 대표 요구와 맞는가?</td><td><b>End-to-End 운영 요구는 사업상 타당하나, 3개월 KPI에서는 직접 매출보다 운영체계 구축 중심으로 조정해야 함.</b></td></tr>
+          <tr><td>용성남 판단안은?</td><td><b>데이터 아키텍터를 기본값으로 두고 운영씬을 최대한 챌린지하여 Fit과 결과를 확인한 뒤 최종 판단한다.</b></td></tr>
+          <tr><td>최종 채용안</td><td><b>3개월 한시적 조건부 채용. 역할명: POC Operations & CRM Data Lead. 평가: 100점 스코어카드 + 30/60/90일 Gate Review.</b></td></tr>
+        </tbody>
+      </table>
+      <div class="decision"><b>최종 한 줄:</b> 한상훈 후보자는 지금 “정규 일본 모객 총괄”로 확정할 대상이 아니라, <b>데이터 아키텍터 기반으로 이뻐 일본 POC 운영씬을 3개월간 강하게 테스트할 대상</b>입니다.</div>
       <div class="page-actions">
         <a class="btn" href="../index.html">HR 홈으로</a>
         <button class="btn ghost" onclick="window.print()">PDF로 출력</button>

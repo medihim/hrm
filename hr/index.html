@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>메디힘 HR 게이트 페이지</title>
+  <title>메디힘 HR 후보자 평가 대시보드</title>
   <link rel="stylesheet" href="../assets/css/style.css" />
   <script src="../assets/js/auth.js"></script>
   <script>requireAuth();</script>
@@ -11,9 +11,10 @@
 <body>
   <header class="topbar">
     <div class="topbar-inner">
-      <a class="brand" href="index.html"><span class="brand-mark">HR</span><span>메디힘 HR 게이트 페이지</span></a>
+      <a class="brand" href="index.html"><span class="brand-mark">HR</span><span>메디힘 HR 평가자료</span></a>
       <nav class="nav">
         <a href="#candidates">인터뷰이</a>
+        <a href="#agenda">판단 어젠다</a>
         <a href="#criteria">평가 기준</a>
         <a href="interviewees/template.html">평가 템플릿</a>
         <button onclick="logout()">로그아웃</button>
@@ -22,92 +23,94 @@
   </header>
   <main class="wrap">
     <section class="hero">
-      <div class="eyebrow">HR Gate Page</div>
-      <h1>후보자 평가 게시판</h1>
-      <p>비밀번호 인증 후 진입하는 HR 게이트 페이지입니다. 아래 인터뷰이 섹션 카드 또는 리스트를 클릭하면 후보자별 세부 평가 자료로 이동합니다.</p>
+      <div class="eyebrow">HR Decision Room</div>
+      <h1>후보자 평가자료 통합 페이지</h1>
+      <p>메디힘 채용 검토 자료를 후보자별로 정리하는 내부 공유 페이지입니다. 현재는 한상훈 후보자에 대해 ① 후보자 역량 ② 최준혁 대표 요구 ③ 용성남 판단안을 통합한 한시적 채용안까지 업데이트했습니다.</p>
       <div class="meta">
-        <span class="pill">인터뷰이 카드형 게시판</span>
-        <span class="pill">평가 템플릿 포함</span>
-        <span class="pill">GitHub Pages 운영</span>
+        <span class="pill">게이트 PW 적용</span>
+        <span class="pill">GitHub Pages 업로드 가능</span>
+        <span class="pill">후보자별 상세 페이지 구조</span>
       </div>
     </section>
 
-    <section id="summary" class="grid grid-4">
+    <section id="summary" class="grid grid-3">
       <article class="card">
-        <span class="tag blue">등록 후보자</span>
-        <div class="score">1명</div>
-        <p>현재 한상훈 후보자 평가자료가 등록되어 있습니다.</p>
+        <span class="tag green">현재 판단</span>
+        <div class="score">3개월 조건부</div>
+        <p><b>정규 채용 즉시 확정은 보류</b>하고, 데이터 아키텍터 기반으로 운영씬을 챌린지하는 한시적 평가 채용안이 적합합니다.</p>
       </article>
       <article class="card">
-        <span class="tag yellow">현재 판단</span>
-        <div class="score">조건부</div>
-        <p><b>정규 채용 즉시 진행은 보류</b>하고 3개월 POC형 투입을 우선 검토합니다.</p>
+        <span class="tag blue">핵심 미션</span>
+        <div class="score">POC OS</div>
+        <p>3개 모객 트랙의 리드·상담·예약·병원연계·매출 추적 구조를 만들고, 운영 Fit을 검증합니다.</p>
       </article>
       <article class="card">
-        <span class="tag purple">핵심 병목</span>
-        <div class="score">모객 POC</div>
-        <p>현재 1차 병목은 CX 운영보다 온라인 상담신청 모객 모델 검증입니다.</p>
-      </article>
-      <article class="card">
-        <span class="tag green">후보자 활용</span>
-        <div class="score">Data Ops</div>
-        <p>상담·예약·시술·매출·정산 데이터 운영체계 설계자로 활용합니다.</p>
+        <span class="tag purple">최종 판단</span>
+        <div class="score">Gate Review</div>
+        <p>30/60/90일 리뷰를 통해 데이터 구조화 역량, 운영 실행력, 사업성과 기여도를 분리 평가합니다.</p>
       </article>
     </section>
 
     <section id="candidates" class="card">
-      <div class="section-head compact">
-        <div>
-          <span class="eyebrow blue-text">Interviewee Board</span>
-          <h2>1. 인터뷰이 리스트</h2>
-        </div>
-      </div>
-      <div class="board-list in-card">
-        <a class="board-card link-card" href="interviewees/hansanghoon.html">
-          <div class="board-card-main">
-            <div class="avatar">한</div>
+      <h2>1. 인터뷰이 평가자료</h2>
+      <div class="grid grid-2">
+        <article class="candidate-card card" style="box-shadow:none">
+          <div class="candidate-head">
             <div>
-              <div class="board-card-title">한상훈 후보자</div>
-              <p>Medidata Senior TAM/CSM, Statistical Programmer, 통계학 박사 기반 데이터 운영형 후보자. 현재 메디힘 스테이지에서는 정규 CX 리드보다 POC 측정체계·상담 데이터 구조 설계 역할이 적합합니다.</p>
-              <div class="tag-row">
-                <span class="tag blue">CX/CRM Data Operations</span>
-                <span class="tag yellow">조건부 검토</span>
-                <span class="tag green">POC형 권장</span>
-              </div>
+              <span class="tag blue">POC Operations & CRM Data</span>
+              <h3>한상훈 후보자</h3>
             </div>
+            <span class="tag yellow">한시적 평가안</span>
           </div>
-          <div class="board-card-side"><span class="status-badge warning-status">정규 보류</span><span class="arrow">→</span></div>
-        </a>
-        <a class="board-card link-card" href="interviewees/template.html">
-          <div class="board-card-main">
-            <div class="avatar muted-avatar">T</div>
+          <p>Medidata Senior TAM/CSM, Statistical Programmer, 통계학 박사 기반의 데이터 운영형 후보자. 최준혁 대표 요구안의 End-to-End 운영 오너 기준을 그대로 적용하기보다, 데이터 아키텍터로 보고 운영씬을 최대한 챌린지하는 3개월 조건부 미션안으로 정리했습니다.</p>
+          <div class="btn-row">
+            <a class="btn" href="interviewees/hansanghoon.html">상세 평가 보기</a>
+          </div>
+        </article>
+        <article class="candidate-card card" style="box-shadow:none">
+          <div class="candidate-head">
             <div>
-              <div class="board-card-title">신규 인터뷰이 평가 템플릿</div>
-              <p>추가 인터뷰이 평가자료를 만들 때 복사해서 사용할 수 있는 HTML 템플릿입니다.</p>
-              <div class="tag-row"><span class="tag purple">Template</span><span class="tag green">업데이트용</span></div>
+              <span class="tag purple">Template</span>
+              <h3>신규 인터뷰이 평가 템플릿</h3>
             </div>
+            <span class="tag green">업데이트용</span>
           </div>
-          <div class="board-card-side"><span class="status-badge open-status">사용 가능</span><span class="arrow">→</span></div>
-        </a>
+          <p>추가 인터뷰이 평가자료를 만들 때 복사해서 사용할 수 있는 HTML 템플릿입니다. 후보자별로 파일을 추가한 뒤 이 대시보드 카드에 링크를 연결하면 됩니다.</p>
+          <div class="btn-row">
+            <a class="btn ghost" href="interviewees/template.html">템플릿 보기</a>
+          </div>
+        </article>
       </div>
     </section>
 
+    <section id="agenda" class="card">
+      <h2>2. 한상훈 의사결정 3대 어젠다</h2>
+      <table>
+        <thead><tr><th>어젠다</th><th>핵심 관점</th><th>의사결정 반영</th></tr></thead>
+        <tbody>
+          <tr><td>한상훈의 역량</td><td>통계·데이터 구조화·SaaS CSM·SLA/VOC·리포팅에 강함. 직접 모객·환자 클로징은 검증 필요.</td><td>기본 포지션은 데이터 아키텍터 / CRM Data Ops로 정의</td></tr>
+          <tr><td>최준혁 대표의 요구</td><td>일본 모객→상담→병원상담→예약→방한·시술→결제→사후관리까지 End-to-End 운영 오너 요구.</td><td>요구 범위는 유지하되, 3개월 평가에서는 직접 매출 KPI보다 운영체계·추적구조를 중심으로 조정</td></tr>
+          <tr><td>용성남 판단</td><td>데이터 아키텍터로 보되 운영씬의 역할을 최대한 챌린지하여 Fit과 결과를 검증.</td><td>3개월 한시 채용 + 30/60/90일 Gate Review + 정규 전환 조건 명확화</td></tr>
+        </tbody>
+      </table>
+    </section>
+
     <section id="criteria" class="card">
-      <h2>2. 메디힘 HR 판단 기준</h2>
+      <h2>3. 메디힘 HR 판단 기준</h2>
       <table>
         <thead><tr><th>판단 축</th><th>핵심 질문</th><th>현재 우선순위</th></tr></thead>
         <tbody>
-          <tr><td>모객 POC</td><td>온라인 상담신청을 반복적으로 만들 수 있는가?</td><td><b>최상</b></td></tr>
+          <tr><td>모객 POC</td><td>온라인 상담신청을 반복적으로 만들 수 있는 트랙이 보이는가?</td><td><b>최상</b></td></tr>
           <tr><td>CX/Data Ops</td><td>상담 이후 데이터를 구조화하고 운영체계화할 수 있는가?</td><td><b>상</b></td></tr>
-          <tr><td>환자 클로징</td><td>상담을 예약·내원·시술로 전환할 수 있는가?</td><td>상</td></tr>
+          <tr><td>환자 클로징</td><td>상담을 예약·내원·시술로 전환할 수 있는가?</td><td>검증 필요</td></tr>
           <tr><td>병원 연동</td><td>병원 게이트, 상담, 예약, 매출, 정산을 연결할 수 있는가?</td><td>상</td></tr>
-          <tr><td>마케팅/Growth</td><td>채널·오퍼·랜딩·콘텐츠 실험을 주도할 수 있는가?</td><td><b>최상</b></td></tr>
+          <tr><td>마케팅/Growth</td><td>채널·오퍼·랜딩·콘텐츠 실험을 주도할 수 있는가?</td><td><b>별도 보완 필요</b></td></tr>
         </tbody>
       </table>
     </section>
 
     <section class="card">
-      <h2>3. 신규 후보자 페이지 추가 방법</h2>
+      <h2>4. 신규 후보자 페이지 추가 방법</h2>
       <ol class="checklist">
         <li><code>hr/interviewees/template.html</code> 파일을 복사합니다.</li>
         <li>파일명을 후보자 영문명 또는 한글명 영문표기로 저장합니다. 예: <code>kimyounghee.html</code></li>
