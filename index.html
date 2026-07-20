@@ -84,7 +84,7 @@
 const PASS = '3370';
 const STORAGE_KEY = 'medihim_hansanghoon_kpi_feedback_v1';
 // Google Apps Script Web App URL을 연결하면 담당자 자동 수신이 가능합니다. 예: https://script.google.com/macros/s/XXXX/exec
-const SUBMIT_ENDPOINT = '';
+const SUBMIT_ENDPOINT = 'https://script.google.com/a/macros/castingn.com/s/AKfycbzrbwMuAh-osgna_G1cRjAAwb0HOS55InJYO8TQePyOK53hx0sKhnuShF1wSJB6P1M/exec';
 const SUBMIT_TOKEN = '3370';
 function unlock(){ const pw=document.getElementById('pw').value.trim(); if(pw===PASS){sessionStorage.setItem('kpi_auth','1'); showApp();} else {document.getElementById('lockMsg').textContent='비밀번호가 일치하지 않습니다.';} }
 function logout(){ sessionStorage.removeItem('kpi_auth'); location.reload(); }
